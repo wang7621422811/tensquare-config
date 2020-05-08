@@ -1,0 +1,37 @@
+server: 
+  port: 9008
+spring: 
+  application:  
+    name: tensquare-user #指定服务名
+  datasource:  
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.93.237.204:3306/tensquare_user?characterEncoding=UTF8
+    username: root
+    password: root
+    hikari:
+      connection-test-query: SELECT 1
+      connection-timeout: 30000
+      idle-timeout: 60000
+      max-lifetime: 120000
+      maximum-pool-size: 10
+      minimum-idle: 10
+  jpa: 
+    database: MySQL
+    show-sql: true
+  rabbitmq:
+    host: 47.93.237.204
+    port: 5672
+  redis:
+    host: 47.93.237.204
+    port: 36379
+    password: 123456
+
+jwt:
+  config:
+    key: itcast
+    ttl: 360000
+
+eureka:
+  client:
+    service‐url:
+      defaultZone: http://localhost:6868/eureka

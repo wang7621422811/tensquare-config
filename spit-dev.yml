@@ -1,0 +1,18 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: tensquare-spit
+  data:
+    mongodb:
+      host: 47.93.237.204
+      database: spitdb
+  redis:
+    host: 47.93.237.204
+    port: 36379
+    password: 123456
+
+eureka:
+  client:
+    service‐url:
+      defaultZone: http://localhost:6868/eureka

@@ -1,0 +1,23 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: tensquare-recruit #指定应用名称 后边使用SpringCloud管理微服务会用到
+
+  #数据库相关配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.93.237.204:3306/tensquare_recruit?characterEncoding=utf-8
+    username: root
+    password: root
+  #jpa相关配置
+  jpa:
+    generate-ddl: false #自动建表
+    show-sql: true
+    database: mysql
+    #database-platform: #
+eureka:
+  client:
+    service‐url:
+      defaultZone: http://localhost:6868/eureka
+
